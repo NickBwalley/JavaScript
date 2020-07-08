@@ -8,7 +8,15 @@ function sayHello(){
 	alert("Hello World This is Nick!...")
 	//->>
 }
+
+var myVar = "Global"; //This is a GlobalVariable
+function variables(){
+	var myVar = "Local";
+	document.write(myVar)//This is a LocalVariable
+}
+
 </script>
+
 </head>
 <body>
 <h1>Click Me!..</h1>
@@ -22,6 +30,6 @@ function sayHello(){
 <br>
 <h1>Variables</h1>
 <!--Working with Variables -->
-
+<script type="text/javascript">variables()</script>
 </body>
 </html>
