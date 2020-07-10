@@ -5,7 +5,7 @@
 }
 
 header{
-	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/img4.jpg);
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../Images/img16.jpg);
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
@@ -41,7 +41,7 @@ ul li.active a{
 
 .logo img{
 	float: left;
-	width: 70px;
+	width: 160px;
 	margin-top: 5px;
 	height: auto;
 }
@@ -53,14 +53,19 @@ ul li.active a{
 
 .title{
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
 
 .title h1{
 	color: #ffffff;
-	font-size: 50px;
+	font-size: 40px;
+}
+.title p{
+	color: #ffffff;
+	font-size: 18px;
+	padding: 20px 0px 0px 0px;
 }
 
 .button{
