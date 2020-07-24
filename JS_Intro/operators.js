@@ -4,6 +4,8 @@ function operators(){
 	var c = "Text";
 	var linebreak = "<br/>";
 
+	document.write("Arithmetic Operators")
+	document.write(linebreak);
 	document.write("a + b = ");
 	result = a + b;
 	document.write(result);
