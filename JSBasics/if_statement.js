@@ -8,5 +8,5 @@ if (b%2==0){
     document.write("b is an even number");
 }
 else{
-    document.write("b is an odd nubmer");
+    document.write("b is an odd number");
 }
