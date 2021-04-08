@@ -1,4 +1,6 @@
-
+function msg(){
+    alert("Hello JavaScript Programmers!");
+}
 
 
 /*External JavaScript file
