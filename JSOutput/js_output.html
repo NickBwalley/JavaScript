@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Output</title>
+</head>
+<body>
+    <p id="calculate"></p>
+    <!--using innerHTML
+    The id attribute defines the HTML element. The innerHTML property defines the HTML content
+    -->
+    <script>
+        document.getElementById('calculate').innerHTML = 5 + 6;
+    </script>
+
+    <!--Using document.write()
+    For testing purposes, it is convenient to use document.write():-->
+    <p>Never call document.write after the document has finished loading.
+    It will overwrite the whole document.</p>
+        
+    <script>
+        document.write(5 + 6);
+    </script>        
+    <br><br>
+    <!--Using document.write() after an HTML document is loaded, will delete all existing HTML:-->
+    <!--Example-->
+    <button type="button" onclick="document.write(5 + 6)">Try it</button>
+    <br>
+
+    <!--Using window.alert()
+    You can use an alert box to display data:-->
+    <script>
+        window.alert(5 + 6);
+    </script>
+    <!--You can skip the window keyword.
+    In JavaScript, the window object is the global scope object, that means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:-->
+
+    <!--Using console.log()
+    For debugging purposes, you can call the console.log() method in the browser to display data.
+    -->
+    <script>
+       console.log(5 + 6);
+    </script>
+
+</body>
+</html>
+
+<!--JavaScript Display Possibilities
+JavaScript can "display" data in different ways:
+
+Writing into an HTML element, using innerHTML.
+Writing into the HTML output using document.write().
+Writing into an alert box, using window.alert().
+Writing into the browser console, using console.log().-->
