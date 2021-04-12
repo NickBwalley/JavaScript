@@ -31,7 +31,7 @@ func3();
 window.value=90;  
 //Now it can be declared inside any function and can be accessed from any function. For example:
 function m(){  
-    window.value=100;//declaring global variable by window object  
+    window.value=100;//declaring global variable by window object.
 }  
 function n(){  
     alert(window.value);//accessing global variable from other function  
