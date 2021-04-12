@@ -26,5 +26,6 @@ Data Type	Description
 Object	represents instance through which we can access members
 Array	represents group of similar values
 RegExp	represents regular expression
+
 */
 
