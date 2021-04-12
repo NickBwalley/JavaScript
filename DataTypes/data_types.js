@@ -88,3 +88,75 @@ Array items are separated by commas.
 
 The following code declares (creates) an array called cars, containing three items (car names):
  */
+// Example
+var cars = ["Saab", "Volvo", "BMW"];
+// Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
+document.write(cars); // prints out the values of the array elements 
+document.write("<br>");
+document.write(typeof(cars)); // object
+document.write("<br>");
+
+/*
+JavaScript Objects
+JavaScript objects are written with curly braces {}.
+
+Object properties are written as name:value pairs, separated by commas. */
+// Example
+var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+document.write(typeof(person)); // object
+document.write("<br>"); 
+/*
+Empty Values
+An empty value has nothing to do with undefined.
+
+An empty string has both a legal value and a type. */
+var car = "";
+document.write(typeof(car));    // String
+document.write("<br><br>");
+
+/*
+Difference Between Undefined and Null
+undefined and null are equal in value but different in type: */
+typeof undefined           // undefined
+typeof null                // object
+
+null === undefined         // false
+null == undefined          // true
+
+/*
+Primitive Data
+A primitive data value is a single simple data value with no additional properties and methods.
+
+The typeof operator can return one of these primitive types:
+
+string
+number
+boolean
+undefined
+*/
+
+
+/*
+typeof "John"              // Returns "string"
+typeof 3.14                // Returns "number"
+typeof true                // Returns "boolean"
+typeof false               // Returns "boolean"
+typeof x                   // Returns "undefined" (if x has no value)
+ */
+
+/*
+Complex Data
+The typeof operator can return one of two complex types:
+
+function
+object
+The typeof operator returns "object" for objects, arrays, and null.
+
+The typeof operator does not return "object" for functions. */
+// Example
+typeof {name:'John', age:34} // Returns "object"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof null                  // Returns "object"
+document.write(typeof function myFunc(){});   // Returns "function"
+
+// NOTE: The typeof operator returns "object" for arrays because in JavaScript arrays are objects
