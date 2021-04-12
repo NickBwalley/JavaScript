@@ -1,5 +1,5 @@
 function msg(){
-    alert("Hello JavaScript Programmers!");
+    alert("Hello JavaScript Programmers!"); // pop up dialog box
 }
 
 
