@@ -87,3 +87,37 @@ var x = 10;
   // Here x is 2
 }
 // Here x is 10
+
+
+// Loop Scope
+// Using var in a loop:
+
+// Example
+var i = 5;
+for (var i = 0; i < 10; i++) {
+  // some statements
+}
+// Here i is 10
+// Using let in a loop:
+
+// Example
+let i = 5;
+for (let i = 0; i < 10; i++) {
+  // some statements
+}
+// Here i is 5
+/*In the first example, using var, the variable declared in the loop redeclares the variable outside the loop.
+
+In the second example, using let, the variable declared in the loop does not redeclare the variable outside the loop.
+
+When let is used to declare the i variable in a loop, the i variable will only be visible within the loop.*/
+
+// Function Scope
+// Variables declared with var and let are quite similar when declared inside a function.
+
+//They will both have Function Scope:
+
+// Global Scope
+// Variables declared with var and let are quite similar when declared outside a block.
+
+// They will both have Global Scope:
