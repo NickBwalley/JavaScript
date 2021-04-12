@@ -79,4 +79,5 @@ new	                creates an instance (object)
 typeof	            checks the type of object.
 void	            it discards the expression's return value.
 yield	            checks what is returned in a generator by the generator's iterator.
+
 */
