@@ -121,3 +121,60 @@ When let is used to declare the i variable in a loop, the i variable will only b
 // Variables declared with var and let are quite similar when declared outside a block.
 
 // They will both have Global Scope:
+
+// Global Variables in HTML
+// With JavaScript, the global scope is the JavaScript environment.
+
+// In HTML, the global scope is the window object.
+
+// Global variables defined with the var keyword belong to the window object:
+// Global variables defined with the let keyword do not belong to the window object:
+
+// Redeclaring
+// Redeclaring a JavaScript variable with var is allowed anywhere in a program:
+var x = 2;
+
+// Now x is 2
+ 
+var x = 3;
+
+// Now x is 3
+
+// Redeclaring a var variable with let, in the same scope, or in the same block, is not allowed:
+
+var x = 2;       // Allowed
+let x = 3;       // Not allowed
+
+{
+  var x = 4;   // Allowed
+  let x = 5   // Not allowed
+}
+
+// Redeclaring a let variable with let, in the same scope, or in the same block, is not allowed:
+let x = 2;       // Allowed
+let x = 3;       // Not allowed
+
+{
+  let x = 4;   // Allowed
+  let x = 5;   // Not allowed
+}
+
+// Redeclaring a variable with let, in another scope, or in another block, is allowed:
+let x = 2;       // Allowed
+
+{
+  let x = 3;   // Allowed
+}
+
+{
+  let x = 4;   // Allowed
+}
+
+// Hoisting
+/* Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution. Inevitably, this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local. */
+// Example
+// This is OK:
+
+carName = "Volvo";
+alert(carName);
+var carName;
