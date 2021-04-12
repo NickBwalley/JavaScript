@@ -7,6 +7,8 @@ JavaScript is a dynamic type language, means you don't need to specify type of t
 
 var a = 10; // holding a number 
 var b = "Nick" // holding a string 
+var x = {firstName:"John", lastName:"Doe"};    // Object
+
 
 /*
 JavaScript primitive data types
@@ -29,3 +31,14 @@ RegExp	represents regular expression
 
 */
 
+/*JavaScript Types are Dynamic
+JavaScript has dynamic types. This means that the same variable can be used to hold different data types: */
+// Example
+var x1;           // Now x is undefined
+x2 = 5;           // Now x is a Number
+x3 = "John";      // Now x is a String
+document.write(typeof(x1));
+document.write("<br>");
+document.write(typeof(x2));
+document.write("<br>");
+document.write(typeof(x3));
