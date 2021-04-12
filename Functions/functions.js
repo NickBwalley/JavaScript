@@ -5,7 +5,7 @@ function myFunction(p1, p2) {
   }
 
 document.write(myFunction(5, 5));
-
+document.write("<br><br>");
 /*
 JavaScript Function Syntax
 A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
@@ -50,4 +50,40 @@ You can reuse code: Define the code once, and use it many times.
 
 You can use the same code many times with different arguments, to produce different results. */
 
+// Example
+// Convert Fahrenheit to Celsius:
 
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+}
+
+// invoke the function
+var x = toCelsius(81); // function result
+var y = toCelsius;  // function object
+
+document.write(x); // oupputs the function result   
+document.write("<br><br>");
+document.write(y); // outputs the function object
+/*
+The () Operator Invokes the Function
+Using the example above, toCelsius refers to the function object, and toCelsius() refers to the function result.
+
+Accessing a function without () will return the function object instead of the function result. */
+document.write("<br><br>");
+
+/*
+Functions Used as Variable Values
+
+Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.
+
+Example
+Instead of using a variable to store the return value of a function: */
+
+var x = toCelsius(77);
+var text = "The temperature is " + x + " Celsius";
+
+// You can use the function directly, as a variable value:
+
+var text = "The temperature is " + toCelsius(77) + " Celsius";
+document.write(text);
+document.write("<br><br>");
