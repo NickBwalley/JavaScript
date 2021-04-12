@@ -141,7 +141,5 @@ JavaScript uses the Unicode character set.
 
 Unicode covers (almost) all the characters, punctuations, and symbols in the world.
 
-
-
 */
 
