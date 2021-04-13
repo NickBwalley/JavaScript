@@ -221,7 +221,8 @@ var text = "Hello".concat(" ", "World!");
 String.trim()
 The trim() method removes whitespace from both sides of a string: */
 var str = "       Hello World!        ";
-alert(str.trim());
+document.write(str.trim());
+document.write("<br>");
 
 /*
 JavaScript String Padding
@@ -229,18 +230,18 @@ ECMAScript 2017 added two String methods: padStart and padEnd to support padding
 // The padStart() method pads a string with another string:
 
 // Example
-// let str = "5";
-// str = str.padStart(4,0);
+var str = "5";
+str = str.padStart(4,0);
 // result is 0005
-// document.write(str);
-// document.write("<br>"); 
+document.write(str);
+document.write("<br>"); 
 
 // Example
-// let str = "5";
-// str = str.padEnd(4,0);
+var str = "5";
+str = str.padEnd(4,0);
 // result is 5000
-// document.write(str);
-// document.write("<br>"); 
+document.write(str);
+document.write("<br>"); 
 
 /*
 Extracting String Characters
@@ -250,3 +251,59 @@ charAt(position)
 charCodeAt(position)
 Property access [ ]
  */
+
+// The charAt() Method
+// The charAt() method returns the character at a specified index (position) in a string:
+
+// Example
+
+var str = "HELLO WORLD";
+document.write(str.charAt(0));            // returns H
+document.write("<br>"); 
+
+/*
+The charCodeAt() Method
+The charCodeAt() method returns the unicode of the character at a specified index in a string:
+
+The method returns a UTF-16 code (an integer between 0 and 65535).
+
+Example */
+
+var str = "HELLO WORLD";
+
+document.write(str.charCodeAt(0));         // returns 72
+document.write("<br>");
+
+/*
+Property Access
+ECMAScript 5 (2009) allows property access [ ] on strings:
+
+Example
+ */
+var str = "HELLO WORLD";
+document.write(str[0]);                   // returns H
+document.write("<br>");
+
+/*
+Property access might be a little unpredictable:
+
+It does not work in Internet Explorer 7 or earlier
+It makes strings look like arrays (but they are not)
+If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+It is read only. str[0] = "A" gives no error (but does not work!) */
+// Example
+var str = "HELLO WORLD";
+str[0] = "A";             // Gives no error, but does not work
+str[0];                   // returns H
+
+// If you want to work with a string as an array, you can convert it to an array.
+
+
+/*
+Converting a String to an Array
+A string can be converted to an array with the split() method: */
+// Example
+var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe
