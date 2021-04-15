@@ -158,7 +158,50 @@ Some JavaScript versions interpret numbers as octal if they are written with a l
 
 /*
 By default, JavaScript displays numbers as base 10 decimals.
-
 But you can use the toString() method to output numbers from base 2 to base 36.
+Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2.
 
-Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2. */
+
+Numbers Can be Objects
+Normally JavaScript numbers are primitive values created from literals:
+
+ */
+
+var x = 123;
+
+// But numbers can also be defined as objects with the keyword new:
+
+var y = new Number(123);
+// typeof x returns number
+// typeof y returns object
+
+/*Do not create Number objects. It slows down execution speed.
+The new keyword complicates the code. This can produce some unexpected results: */
+
+
+// When using the == operator, equal numbers are equal:
+
+// Example
+var x = 500;             
+var y = new Number(500);
+
+// (x == y) is true because x and y have equal values
+
+/*When using the === operator, equal numbers are not equal, because the === operator expects equality in both type and value.*/
+
+// Example
+var x = 500;             
+var y = new Number(500);
+
+// (x === y) is false because x and y have different types
+
+// Or even worse. Objects cannot be compared:
+
+// Example
+var x = new Number(500);             
+var y = new Number(500);
+
+// (x == y) is false because objects cannot be compared
+
+/*Note the difference between (x==y) and (x===y).
+Comparing two JavaScript objects will always return false.*/
