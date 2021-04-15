@@ -72,3 +72,57 @@ var x = "100";
 var y = "10";
 var z = x - y;       // z will be 90
 
+// But this will not work:
+
+var x = "100";
+var y = "10";
+var z = x + y;       // z will not be 110 (It will be 10010)
+
+// In the last example JavaScript uses the + operator to concatenate the strings.
+
+
+/*
+NaN - Not a Number
+NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+
+Example */
+
+var x = 100 / "Apple";  // x will be NaN (Not a Number)
+
+document.write(x);      // x will be: NaN
+document.write("<br>"); 
+
+// However, if the string contains a numeric value , the result will be a number:
+// Example
+var x = 100 / "10";     // x will be 10
+
+// You can use the global JavaScript function isNaN() to find out if a value is a number:
+// Example
+var x = 100 / "Apple";
+document.write(isNaN(x));               // returns true because x is Not a Number
+document.write("<br>"); 
+
+// Watch out for NaN. If you use NaN in a mathematical operation, the result will also be NaN:
+// Example
+var x = NaN;
+var y = 5;
+var z = x + y;         // z will be NaN
+
+// Or the result might be a concatenation:
+// Example
+var x = NaN;
+var y = "5";
+var z = x + y;         // z will be NaN5
+
+// NaN is a number: typeof NaN returns number:
+
+document.write(typeof NaN);            // returns "number"
+document.write("<br>");
+
+/*
+Infinity
+Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+
+Example */
