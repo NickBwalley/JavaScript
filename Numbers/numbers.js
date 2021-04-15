@@ -126,3 +126,7 @@ Infinity
 Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
 
 Example */
+var myNumber = 2;
+while (myNumber != Infinity) {   // Execute until Infinity
+  myNumber = myNumber * myNumber;
+}
