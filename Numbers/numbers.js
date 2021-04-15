@@ -130,3 +130,35 @@ var myNumber = 2;
 while (myNumber != Infinity) {   // Execute until Infinity
   myNumber = myNumber * myNumber;
 }
+
+/*
+Division by 0 (zero) also generates Infinity:
+
+Example */
+var x =  2 / 0;       // x will be Infinity
+document.write("<br>");
+document.write(x);
+var y = -2 / 0;       // y will be -Infinity 
+
+// Infinity is a number: typeof Infinity returns number.
+
+typeof Infinity;     // returns "number"
+
+/*
+Hexadecimal
+JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+
+Example */
+var x = 0xFF;        // x will be 255
+document.write("<br>");
+document.write(x);
+/*Never write a number with a leading zero (like 07).
+Some JavaScript versions interpret numbers as octal if they are written with a leading zero. */
+
+
+/*
+By default, JavaScript displays numbers as base 10 decimals.
+
+But you can use the toString() method to output numbers from base 2 to base 36.
+
+Hexadecimal is base 16. Decimal is base 10. Octal is base 8. Binary is base 2. */
