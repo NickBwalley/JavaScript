@@ -75,3 +75,39 @@ When comparing 40 and 100, the sort() method calls the compare function(40, 100)
 
 The function calculates 40 - 100 (a - b), and since the result is negative (-60),  the sort function will sort 40 as a value lower than 100.
  */
+
+/*
+Find the Highest (or Lowest) Array Value
+There are no built-in functions for finding the max or min value in an array.
+
+However, after you have sorted an array, you can use the index to obtain the highest and lowest values.
+
+Sorting ascending:
+
+Example*/
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+// now points[0] contains the lowest value
+// and points[points.length-1] contains the highest value
+// Sorting descending:
+
+// Example
+
+var points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return b - a});
+// now points[0] contains the highest value
+// and points[points.length-1] contains the lowest value
+// Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value.
+
+
+/*
+Using Math.max() on an Array
+You can use Math.max.apply to find the highest number in an array:
+Example*/
+
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+} 
+var x = myArrayMax(points);
+toPrint( "The Highest value is: " + x);
+
