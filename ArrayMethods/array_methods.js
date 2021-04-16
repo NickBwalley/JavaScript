@@ -187,3 +187,22 @@ var citrus = fruits.slice(3);
 toPrint(citrus);
 newLine();
 
+/*
+The slice() method can take two arguments like slice(1, 3).
+The method then selects elements from the start argument, and up to (but not including) the end argument.
+Example*/
+
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3); 
+toPrint(citrus);        // output: Orange Lemon
+newLine();
+
+// If the end argument is omitted, like in the first examples, the slice() method slices out the rest of the array.
+// Example
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(2);
+toPrint(citrus);
+newLine();
+
+// All JavaScript objects have a toString() method.
+
