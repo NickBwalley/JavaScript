@@ -111,3 +111,15 @@ function myArrayMax(arr) {
 var x = myArrayMax(points);
 toPrint( "The Highest value is: " + x);
 
+
+/*
+Using Math.min() on an Array
+You can use Math.min.apply to find the lowest number in an array:
+
+Example*/
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+
+var y = myArrayMin(points);
+toPrint( newLIne() + "The Lowest Value is: " +  y);
