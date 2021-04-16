@@ -132,5 +132,35 @@ document.write("<br><br>");
 var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
 document.write(myChildren);
 document.write("<br><br>");
+// FUNCTION TO CREATE A NEW LINE
+function newLine(){
+    document.write("<br><br>");
+}
 // The concat() method does not change the existing arrays. It always returns a new array.
 
+
+// The concat() method can take any number of array arguments:
+// Example (Merging Three Arrays)
+var arr1 = ["Cecilie", "Lone"];
+var arr2 = ["Emil", "Tobias", "Linus"];
+var arr3 = ["Robin", "Morgan"];
+var myChildren = arr1.concat(arr2, arr3);   // Concatenates arr1 with arr2 and arr3
+
+
+// The concat() method can also take strings as arguments:
+// Example (Merging an Array with Values)
+var arr1 = ["Emil", "Tobias", "Linus"];
+var myChildren = arr1.concat("Peter"); 
+ 
+
+/*
+Slicing an Array
+The slice() method slices out a piece of an array into a new array.
+This example slices out a part of an array starting from array element 1 ("Orange"):
+Example*/
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+document.write(fruits);
+newLine();
+var citrus = fruits.slice(1);
+document.write(citrus);
+newLine();
