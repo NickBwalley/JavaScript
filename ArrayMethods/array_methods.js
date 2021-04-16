@@ -101,7 +101,7 @@ document.write("<br>");
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.splice(2, 2, "Lemon", "Kiwi"); 
 document.write(fruits);
-document.write("<br>");
+document.write("<br><br>");
 
 
 /*
@@ -116,3 +116,21 @@ fruits.splice(0, 1);        // Removes the first element of fruits
 /*The first parameter (0) defines the position where new elements should be added (spliced in).
 The second parameter (1) defines how many elements should be removed.
 The rest of the parameters are omitted. No new elements will be added.*/
+
+
+/*
+Merging (Concatenating) Arrays
+The concat() method creates a new array by merging (concatenating) existing arrays:
+Example (Merging Two Arrays)*/
+
+var myGirls = ["Cecilie", "Lone"];
+document.write(myGirls);
+document.write("<br><br>");
+var myBoys = ["Emil", "Tobias", "Linus"];
+document.write(myGirls);
+document.write("<br><br>");
+var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
+document.write(myChildren);
+document.write("<br><br>");
+// The concat() method does not change the existing arrays. It always returns a new array.
+
