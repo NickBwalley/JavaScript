@@ -132,10 +132,23 @@ document.write("<br><br>");
 var myChildren = myGirls.concat(myBoys);   // Concatenates (joins) myGirls and myBoys
 document.write(myChildren);
 document.write("<br><br>");
+
+
+
+// #####################################################3
 // FUNCTION TO CREATE A NEW LINE
 function newLine(){
     document.write("<br><br>");
 }
+
+// FUNCTION TO DOCUMENT.WRITE
+function toPrint(value){
+    document.write(value);
+}
+// #####################################################
+
+
+
 // The concat() method does not change the existing arrays. It always returns a new array.
 
 
@@ -164,3 +177,13 @@ newLine();
 var citrus = fruits.slice(1);
 document.write(citrus);
 newLine();
+// The slice() method creates a new array. It does not remove any elements from the source array.
+// This example slices out a part of an array starting from array element 3 ("Apple"):
+// Example
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+toPrint(fruits);
+newLine();
+var citrus = fruits.slice(3);
+toPrint(citrus);
+newLine();
+
