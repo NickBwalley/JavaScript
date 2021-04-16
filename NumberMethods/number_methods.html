@@ -9,6 +9,23 @@
     <title>JS Number Methods</title>
 </head>
 <body>
-    
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <!-- internal js-->
+    <script>
+        var x = new Date("2017-09-30");
+        document.getElementById("demo").innerHTML = Number(x); 
+        var x = Number.MAX_VALUE;
+        document.write(x);
+        document.write("<br>");
+        var x = Number.MIN_VALUE;
+        document.write(x);
+        document.write("<br>");
+
+        var x = Number.POSITIVE_INFINITY; // POSITIVE_INFINITY is returned on overflow:
+        document.write(x);
+        document.write("<br>");
+        </script>
 </body>
 </html>

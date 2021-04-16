@@ -75,3 +75,109 @@ There is no reason to use it in your code.
 All JavaScript data types have a valueOf() and a toString() method.
  */
 
+/*
+Converting Variables to Numbers
+There are 3 JavaScript methods that can be used to convert variables to numbers:
+
+The Number() method
+The parseInt() method
+The parseFloat() method
+
+Method	        Description
+Number()	    Returns a number, converted from its argument.
+parseFloat()	Parses its argument and returns a floating point number
+parseInt()	    Parses its argument and returns an integer
+
+These methods are not number methods, but global JavaScript methods. */
+
+// The Number() Method
+// Number() can be used to convert JavaScript variables to numbers:
+
+Number(true);          // returns 1
+Number(false);         // returns 0
+Number("10");          // returns 10
+Number("  10");        // returns 10
+Number("10  ");        // returns 10
+Number(" 10  ");       // returns 10
+Number("10.33");       // returns 10.33
+Number("10,33");       // returns NaN
+Number("10 33");       // returns NaN
+Number("John");        // returns NaN
+
+/*
+The Number() Method Used on Dates
+Number() can also convert a date to a number:
+
+Example*/
+Number(new Date("2017-09-30"));    // returns 1506729600000
+// The Number() method above returns the number of milliseconds since 1.1.1970.
+
+/*
+The parseInt() Method
+parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+ 
+Example*/
+parseInt("10");         // returns 10
+parseInt("10.33");      // returns 10
+parseInt("10 20 30");   // returns 10
+parseInt("10 years");   // returns 10
+parseInt("years 10");   // returns NaN 
+// If the number cannot be converted, NaN (Not a Number) is returned.
+
+
+/*
+The parseFloat() Method
+parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+
+Example */
+parseFloat("10");        // returns 10
+parseFloat("10.33");     // returns 10.33
+parseFloat("10 20 30");  // returns 10
+parseFloat("10 years");  // returns 10
+parseFloat("years 10");  // returns NaN
+// If the number cannot be converted, NaN (Not a Number) is returned.
+
+/*
+Number Properties
+
+Property	        Description
+MAX_VALUE	        Returns the largest number possible in JavaScript
+MIN_VALUE	        Returns the smallest number possible in JavaScript
+POSITIVE_INFINITY	Represents infinity (returned on overflow)
+NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+NaN	                Represents a "Not-a-Number" value */
+
+// Example
+
+// MAX_VALUE returns the largest possible number in JavaScript.
+var x = Number.MAX_VALUE;
+document.write(x);
+document.write("<br>");
+
+// MIN_VALUE returns the lowest possible number in JavaScript.
+var x = Number.MIN_VALUE;
+
+// JavaScript POSITIVE_INFINITY
+// Example
+var x = Number.POSITIVE_INFINITY; // POSITIVE_INFINITY is returned on overflow
+
+// JavaScript NEGATIVE_INFINITY
+// Example
+var x = Number.NEGATIVE_INFINITY; // NEGATIVE_INFINITY is returned on overflow:
+
+
+/*
+NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+
+Example */
+var x = 100 / "Apple";  // x will be NaN (Not a Number)
+
+/*
+Number Properties Cannot be Used on Variables
+Number properties belongs to the JavaScript's number object wrapper called Number.
+
+These properties can only be accessed as Number.MAX_VALUE.
+
+Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined: */
