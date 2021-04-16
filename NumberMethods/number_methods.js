@@ -174,10 +174,14 @@ Trying to do arithmetic with a non-numeric string will result in NaN (Not a Numb
 Example */
 var x = 100 / "Apple";  // x will be NaN (Not a Number)
 
+
 /*
 Number Properties Cannot be Used on Variables
 Number properties belongs to the JavaScript's number object wrapper called Number.
-
 These properties can only be accessed as Number.MAX_VALUE.
+Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined:
 
-Using myNumber.MAX_VALUE, where myNumber is a variable, expression, or value, will return undefined: */
+Example */
+var x = 6;
+var y = x.MAX_VALUE;    // y becomes undefined
+
